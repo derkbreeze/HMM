@@ -1,6 +1,6 @@
-# HMM-GMM
+# HMM
 
-This is my personal implementation of hidden markov model and gaussian mixture model, two classical generative models in statistical machine learning. HMM is trained in an unsupervised way, the code implements the forward-backward algorithm to calculate the marginal probabilities of the states at any time step given the partial/full observations, the Baum-Welch algorithm is utilized to estimate the initial probability distribution, the transition and emission probability distributions.
+This is my personal implementation of hidden markov model, a generative model in statistical machine learning. HMM is trained in an unsupervised way, the code implements the forward-backward algorithm to calculate the marginal probabilities of the states at any time step given the partial/full observations, the Baum-Welch algorithm is utilized to estimate the initial, transition and emission probability distributions.
 For this example, the observations were spaces and letters but the code is generic enough that it could work with any sequence of observations and hidden states. All of the probabilities discussed below will be in log-space.
 
 The inference of HMM is implemented as a Viterbi algorithm(Dynamic Programming)
@@ -40,9 +40,3 @@ The `forward` function runs the forward algorithm and returns a list of dictiona
 You can also use the backward algorithm to get the same result:
 
     h.backward_probability(h.backward(s), s)
-    
-## Gaussian Mixture Model
-
-It is implemented in matlab. run GMM.m and see the plots
-
-
